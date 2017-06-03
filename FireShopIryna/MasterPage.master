@@ -1,0 +1,111 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register Src="~/WUC/WUC_Footer.ascx" TagPrefix="uc1" TagName="WUC_Footer" %>
+<%@ Register Src="~/WUC/WUC_Tilbud.ascx" TagPrefix="uc1" TagName="WUC_Tilbud" %>
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Vi er en brændovnsbutik, som har valgt at ligge butikken på nettet, så du som
+kunde i fred og ro kan sidde og kigge de mange ovne og tilbehør igennem. " />
+
+    <title>FireShop</title>
+
+    <!--Bootstrap-->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+
+     <!--LightBox-->
+    <link href="Styles/css/lightbox.css" rel="stylesheet" />
+
+    <!-- Særlige styles der overskriver Bootstrap -->
+    <link href="//db.onlinewebfonts.com/c/9a1626276b430d216809407c3fbcda75?family=Futura-Bold" rel="stylesheet" type="text/css"/>
+    <link href="Styles/MyStyleSheet.css" rel="stylesheet" />
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header class="container">
+            <asp:Repeater ID="Repeater_HeaderBillede" ItemType="_Billede" runat="server">
+                <ItemTemplate>
+                    <asp:Image ID="header_img" ImageUrl='<%# "~/Images/header_images/" + Item.billede_navn%>' runat="server" />
+                </ItemTemplate>
+            </asp:Repeater>
+            
+
+            <!--Søgning-->
+            <asp:Panel ID="Panel_Sog" runat="server">
+                <asp:TextBox ID="TextBox_Sog" runat="server"></asp:TextBox>
+                <asp:Button ID="Button_Sog" runat="server" OnClick="Button_Sog_Click" Text="Søg" ValidationGroup="Sog"/>
+                <p>
+                    <asp:LinkButton ID="LinkButton_Sog" OnClick="LinkButton_Sog_Click" runat="server">Avanceret søg</asp:LinkButton>
+                </p>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator_Sog" runat="server"
+                    ErrorMessage="Feltet må ikke være tomt!!"
+                    Text="Må ikke være tomt!! * "
+                    ControlToValidate="TextBox_Sog"
+                    Display="Dynamic"
+                    ForeColor="Red"
+                    Font-Size="X-Small"
+                    ValidationGroup="Sog">
+                </asp:RequiredFieldValidator>
+            </asp:Panel>
+
+
+            <div class="navbar" role="navigation">
+                <ul class="nav navbar-nav front pull-left ">
+                    <li>
+                        <asp:HyperLink ID="HyperLink_Forsiden" NavigateUrl="Default.aspx" runat="server">Forsiden</asp:HyperLink>
+                    </li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink_Breandeovne" NavigateUrl="Breandeovne.aspx" runat="server"></asp:HyperLink>
+                    </li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink_Tilbehor" NavigateUrl="Tilbehor.aspx" runat="server"></asp:HyperLink>
+                    </li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink_Kontakt" NavigateUrl="Kontakt.aspx" runat="server"></asp:HyperLink>
+                    </li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink_Nyheder" NavigateUrl="Nyheder.aspx" runat="server"></asp:HyperLink>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar -->
+        </header>
+        <main class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div class="col-md-3 aside">
+                    <h2>
+                         <asp:Label ID="Label_TilbudOverskrift" runat="server"></asp:Label>
+                    </h2>
+                    <uc1:WUC_Tilbud runat="server" id="WUC_Tilbud" />
+                </div>
+            </div>
+        </main>
+        <footer class="container">
+            <uc1:WUC_Footer runat="server" ID="WUC_Footer" />
+        </footer>
+    </form>
+
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <!--LightBox-->
+    <script src="Scripts/js/lightbox.js"></script>
+
+</body>
+</html>

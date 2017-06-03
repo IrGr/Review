@@ -1,0 +1,95 @@
+﻿
+.admin{
+    margin-top:70px;
+}
+
+#ContentPlaceHolder1_LinkButton_AddProdukt{
+    background-color:#000;
+}
+/*/////////////////////////////////////
+  ////////////            /////////////
+ ///////////// AdminModul /////////////
+ /////////////            /////////////
+ //////////////////////////////////////*/   
+.panel-default > .panel-heading{
+  /*background-color: #7200AC;
+   color:#fff;
+   background-image:none;
+   border-radius:0;*/ 
+}
+.panel-default, .btn{
+    border-radius:0;
+}
+.panel-default{
+    /*border:solid #808080 1px;
+    border:solid #7200AC 1px;*/
+     /*border:solid #00a48d 1px;*/
+}
+
+.btn.btn-gem{
+    background-color:#f26122;
+    background-image:none;
+    border:0;
+    color:#fff;
+}
+.btn-primary{
+    background-color:#4690fb;/*blå*/
+    background-image:none;
+    border:none;
+}
+.btn-danger{
+    background-color:#e64856;/*rød*/
+    background-image:none;
+    padding-left:5px;
+    padding-right:5px;
+}
+.modal-content{
+    border-radius:0;
+}
+.modal-content .form-control{
+    border-radius:0;
+}
+.modal-content .panel-heading{
+    color:#fff;
+    /*background-color:#7200AC;lilla*/
+    background-color:#2c2a2a;
+    padding-top:50px;
+    padding-bottom:50px;
+}
+.modal-content .panel-heading h3{
+    font-size:x-large;
+}
+.modal-content .btn{
+    /*background-color:#f26122;orange*/
+    background-color:#00a48d;
+    background-image:none;
+    border:none;
+  
+}
+.control-group .form-control{
+    border-radius:0;
+}
+
+/*LOGIN*/
+.Label_Error{
+    color:Red;
+    font-weight:bold;
+    margin-right:5px;
+}
+
+
+/*//////////////////////////
+  ////                 /////
+ /////    LogoAdmin    /////
+ /////                 /////
+ //////////////////////////*/
+.logo {
+    font-size: 14px;
+    line-height: 50px;
+    color: #777777; /*grå*/
+}
+
+a.logo:hover {
+    text-decoration: none;
+    color: #fff;
+}

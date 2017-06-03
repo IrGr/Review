@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageAdmin.master.cs" Inherits="Admin_MasterPageAdmin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Vi er en brændovnsbutik, som har valgt at ligge butikken på nettet, så du som
+kunde i fred og ro kan sidde og kigge de mange ovne og tilbehør igennem." />
+
+    <title>AdministrationModul</title>
+
+     <!--Bootstrap-->
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/bootstrap-theme.min.css" rel="stylesheet" />
+
+    <!-- Særlige styles der overskriver Bootstrap -->
+    <link href="../Styles/MyAdminStyleSheet.css" rel="stylesheet" />
+
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="admin">
+    <form id="form1" runat="server">
+         <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <asp:HyperLink ID="HyperLink_Logo" class="logo" NavigateUrl="~/Admin/DefaultAdmin.aspx"  runat="server"></asp:HyperLink>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav pull-right">
+                        <li class='<%= IsCurrent("BreandeovneAdmin.aspx") %>'>
+                            <asp:HyperLink ID="HyperLink_BreandeovneAdmin" NavigateUrl="BreandeovneAdmin.aspx" runat="server"></asp:HyperLink>
+                        </li>
+                        <li class='<%= IsCurrent("TilbehorAdmin.aspx") %>'>
+                            <asp:HyperLink ID="HyperLink_TilbehorAdmin" NavigateUrl="TilbehorAdmin.aspx" runat="server"></asp:HyperLink>
+                        </li>
+                         <li class='<%= IsCurrent("TilbudAdmin.aspx") %>'>
+                            <asp:HyperLink ID="HyperLink_TilbudAdmin" NavigateUrl="TilbudAdmin.aspx" runat="server"></asp:HyperLink>
+                        </li>
+                        <li class='<%= IsCurrent("KontaktAdmin.aspx") %>'>
+                            <asp:HyperLink ID="HyperLink_KontaktAdmin" NavigateUrl="KontaktAdmin.aspx" runat="server"></asp:HyperLink>
+                        </li>
+                        <li class='<%= IsCurrent("NyhederAdmin.aspx") %>'>
+                            <asp:HyperLink ID="HyperLink_Nyheder" NavigateUrl="NyhederAdmin.aspx" runat="server"></asp:HyperLink>
+                        </li>
+                        <li>
+                             <asp:LinkButton ID="Hyperlink_LogUd" OnClick="Hyperlink_LogUd_Click" runat="server">LogUd</asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.nav-collapse -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.navbar -->
+    <div class="container">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+
+    <script src="../Scripts/jquery-1.9.1.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+</body>
+</html>

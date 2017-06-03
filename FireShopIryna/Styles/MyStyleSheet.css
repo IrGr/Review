@@ -1,0 +1,318 @@
+﻿@import url(//db.onlinewebfonts.com/c/9a1626276b430d216809407c3fbcda75?family=Futura-Bold);
+body {
+    background-color: #fff;
+}
+
+* {
+    color: #212121;
+    font-family:Arial;
+    font-size:10px;
+    font-weight:normal;
+}
+
+header img{
+   border: #8f9088 1px solid;
+}
+
+.container {
+    width: 742px;
+    padding:0;
+}
+main{
+    border: #8f9088 1px solid;
+    min-height:480px;
+}
+.row{
+    margin:0;
+}
+.col-md-9{
+    margin-top:15px;
+}
+hr{
+    margin:10px 0;
+}
+
+footer{
+    border-left: #8f9088 1px solid;
+    border-right: #8f9088 1px solid;
+    height:30px;
+    text-align:center;
+    
+}
+footer span{
+    font-weight:bold;
+    letter-spacing:0,5px;
+}
+article.forsideTekst{
+    margin-bottom:20px;
+}
+main.container{
+    padding-bottom:20px;
+}
+
+/*/////////////////////
+  ////            /////
+ ///// Navigation /////
+ /////            /////
+ //////////////////////*/
+
+.navbar {
+    border-radius: 0;
+    background-image: none;
+    background-color: #E3E4DC;
+    margin-bottom: 0;
+    min-height: 40px;
+    border: #8f9088 1px solid;
+}
+
+.navbar-nav a {
+    font-size: 10px;
+    color: #71726E;
+}
+
+.navbar-nav.front li a {
+    margin:5px 2px;
+    padding: 5px 40px;
+    border-right: 1px solid #c9c7bf;
+    font-family:"Futura-Bold";
+    /*font-family:"Futura Md BT";*/
+    text-transform:uppercase;
+    font-style:italic;
+  
+   
+}
+
+a#HyperLink_Nyheder{
+    border-right:none; 
+}
+
+
+header {
+    position: relative;
+}
+
+#Panel_Sog {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+#Panel_Sog input{
+    border:solid #000 1px;
+    background-color:#fff;
+}
+
+a#LinkButton_Sog {
+    color: #000;
+    font-weight:bold;
+}
+#TextBox_Sog{
+   width:163px;
+}
+.col-md-3.aside{
+    border-left: #8f9088 1px solid;
+    margin:15px 0;
+}
+.nav.navbar-nav.front.pull-left li:hover{
+    background-color:none;
+}
+
+/*/////////////////////
+  ////            /////
+ ///// Typografi  /////
+ /////            /////
+ //////////////////////*/
+
+h1,h2{
+    /* font-family:"Futura-Bold";*/
+   font-family:"Futura Md BT";
+    font-style:italic;
+    text-transform:uppercase;
+}
+
+h2{
+    color:#ed3018;
+    font-size:14px;
+}
+h2 #Label_TilbudOverskrift{
+     font-size:14px;
+     /*font-family:"Futura-Bold";*/
+     font-family:"Futura Md BT";
+}
+h6{
+    font-weight:bold;
+}
+#ContentPlaceHolder1_Label_VelkommenOverskrift{
+    font-weight:bold;
+}
+#ContentPlaceHolder1_Overskrift{
+    text-align:right;
+}
+h3 #ContentPlaceHolder1_Label_VelkommenOverskrift{
+     font-family:Arial;
+  
+}
+/*/////////////////////
+  ////            /////
+ /////   Tilbud   /////
+ /////            /////
+ //////////////////////*/
+
+.Panel_TilbudProdukt img{
+    float:left;
+    width:20%;
+   
+}
+#Panel_TilbudProdukt{
+    display:block;
+}
+#WUC_Tilbud_Repeater_TilbudProdukt_Panel_TilbudProdukt{
+    display:inline-block;
+}
+
+.tilbud_beskrivelse{
+    float:right;
+    display:inline-block;
+    width:50%;
+}
+
+.tilbud{
+    display:block;
+    margin:50px 0;
+}
+.tilbud p{
+    margin-bottom:0;
+}
+.rodfarve{
+    color:#ed3018;
+}
+#Label_TilbudOverskrift{
+    text-transform:none;
+}
+
+/*/////////////////////
+  ////            /////
+ /////   Mærke    /////
+ /////            /////
+ //////////////////////*/
+
+.mearkestyle{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.Panel_Produkt{
+    margin-bottom:20px;
+}
+
+hr.rodfarve {
+    display: block;
+    border-top: 1px solid #ed3018;
+    margin:15px 0;
+}
+hr.rodfarve:last-child {
+    display:none;
+
+}
+
+/*/////////////////////
+  ////            /////
+ /////   Kontakt  /////
+ /////            /////
+ //////////////////////*/
+
+.kontaktoplysninger_info{
+    margin:0;
+}
+
+.form-group span{
+    display:block;
+}
+#ContentPlaceHolder1_WUC_KontaktFormular_Panel_KontaktFormular{
+    margin-top:20px;
+}
+
+.col-md-4 .col-md-12{
+    padding:0;
+}
+.col-md-4 .col-md-12 input,
+.col-md-4 .col-md-12 textarea{
+    width:150px;
+}
+.col-md-4 .col-md-12 input[type="submit"]{
+    width:70px;
+}
+/*/////////////////////
+  ////            /////
+ /////   Produkt  /////
+ /////            /////
+ //////////////////////*/
+.col-md-10 article{
+    margin-bottom:20px;
+}
+ul.produktDetaljerList {
+    list-style: none; /* Remove list bullets */
+    padding: 0;
+    margin: 0;
+}
+.produktDetaljerList li:before {
+    content: "*"; /* Insert content that looks like bullets */
+    padding-right: 5px;
+   
+}
+.col-md-2.imageText{
+    padding:50px 0;
+}
+.linkbutton{
+    width:80%;
+   
+}
+.linkbutton a{
+ color:#000;
+}
+.overskrift{
+    width:15%;
+    text-align:right;
+}
+h2.overskrift {
+    margin-bottom:5px;
+}
+hr.kontaktoplysninger_info{
+    margin-top:0;
+    margin-bottom:25px;
+}
+.linkbutton,.overskrift{
+    display:inline-block;
+}
+
+
+/*/////////////////////
+  ////            /////
+ /////   Søgning  /////
+ /////            /////
+ //////////////////////*/
+.sogefelte_margin{
+    margin:5px 0;
+}
+.sogefelte_margin .col-md-1.form-control-label{
+    padding-left:0;
+}
+.sogefelte_margin select{
+    width:100px,
+}
+
+/*/////////////////////
+  ////            /////
+ /////   Nyheder  /////
+ /////            /////
+ //////////////////////*/
+
+.nyhed h6{
+    margin-bottom:0px;
+}
+.nyhed article{
+    margin:10px 0;
+}
+
+
+
+
