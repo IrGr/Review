@@ -25,7 +25,7 @@ public partial class Admin_TilbehorAdmin : System.Web.UI.Page
         {
             int id = Convert.ToInt32(e.CommandArgument);
             //hvis id er forskellig fra null - starter med at slette
-            if (id != null)
+            if (id != 0)
             {
                 //1. Sletter Produkt_Tilbud relationer
                 var tilbud = new DB().TagTilbudTilEtProdukt(db, id);

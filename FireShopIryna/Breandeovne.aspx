@@ -36,7 +36,7 @@
                 <asp:Panel ID="Panel_Type" CssClass="col-md-4 mearkestyle" runat="server">
                     <figure>
                         <asp:Image ID="Image_Mearke"
-                            ImageUrl='<%# Item.fk_billede_id !=null ? "../Images/mearke/"+ Item._Billede.billede_navn :"~/Images/billede-på-vej.jpg" %>' runat="server" />
+                            ImageUrl='<%# Item.fk_billede_id !=0 ? "../Images/mearke/"+ Item._Billede.billede_navn :"~/Images/billede-på-vej.jpg" %>' runat="server" />
                         <figcaption class="rodfarve"><%# Item.mearke_navn %></figcaption>
                 </asp:Panel>
             </asp:HyperLink>

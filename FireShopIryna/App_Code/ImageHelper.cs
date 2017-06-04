@@ -112,7 +112,7 @@ public class ImageHelper
             ThumbMaker.Dispose();
             Thumb.Dispose();
         }
-        catch (Exception ex)
+        catch (Exception)
         {
 
             return 2;
